@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura N° {{ factura.numero_factura }}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cheltons.css' %}">
+</head>
+<body>
+    <video muted autoplay loop id="background-video">
+        <source src="{% static 'video/fondo.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <h2>Factura N° {{ factura.numero_factura }}</h2>
+    
+    <div class="info-box">
+        <p>Cliente: {{ factura.cliente.nombre_cliente }} {{ factura.cliente.apellido_cliente }}</p>
+        <p>RUC: {{ ruc }}</p>
+        <p>Empleado: {{ factura.empleado.nombre_empleado }} {{ factura.empleado.apellido_empleado }}</p>
+        <p>Fecha: {{ factura.fecha_factura }}</p>
+        <p>Dirección: {{ factura.cliente.direccion }}</p>
+    </div>
+
+    <h3>Detalles</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Cantidad</th>
+                <th>Descripción</th>
+                <th>Precio Unitario</th>
+                <th>Valor de Venta</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for detalle in detalles %}
+                <tr>
+                    <td>{{ detalle.cantidad }}</td>
+                    <td>{{ detalle.producto }}</td>
+                    <td>{{ detalle.precio_unitario|floatformat:2 }}</td>
+                    <td>{{ detalle.valor_venta|floatformat:2 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="info-box">
+        <p>Subtotal: {{ subtotal|floatformat:2 }}</p>
+        <p>IGV (18%): {{ igv|floatformat:2 }}</p>
+        <p>Total: {{ total|floatformat:2 }}</p>
+    </div>
+
+    <button onclick="window.history.back();">Volver Atrás</button>
+</body>
+</html>

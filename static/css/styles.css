@@ -1,0 +1,111 @@
+/* General styles for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffbea; /* Soft yellow background */
+    color: #333; /* Dark gray text */
+    margin: 0;
+}
+
+/* Header style customization */
+#header {
+    background-color: #ff9800; /* Vibrant orange background */
+    color: white; /* White text */
+    padding: 10px 20px;
+}
+
+#header .module h1 {
+    color: white; /* Ensures the main header text is white */
+}
+
+.breadcrumbs, .breadcrumbs a {
+    color: #ffe082 !important; /* Light yellow breadcrumb links */
+}
+
+/* Styles for admin sections */
+.module .model-group, .module h2 {
+    background-color: #ffeb3b; /* Bright yellow background */
+    color: #4e4e4e !important; /* Dark gray for section titles */
+    border: 1px solid #ffc107;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* Links within the yellow sections */
+.module .model-group a {
+    color: #e65100 !important; /* Dark orange link text */
+    text-decoration: none;
+}
+
+.module .model-group a:hover {
+    color: #bf360c !important; /* Darker orange on hover */
+}
+
+/* Buttons within the sections */
+.button, .addlink, .changelink {
+    background-color: #ff5722; /* Bright orange background for buttons */
+    color: white !important;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .addlink:hover, .changelink:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background-color: #fff8e1; /* Light cream background */
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+}
+
+table, th, td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffb74d; /* Light orange header background */
+    color: white; /* White text */
+    font-weight: 600;
+}
+
+td {
+    background-color: #f9fbe7; /* Very light greenish-yellow for cells */
+    color: #555; /* Slightly lighter gray text */
+}
+
+tr:nth-child(even) {
+    background-color: #fff3e0; /* Alternating soft orange row color */
+}
+
+tr:hover {
+    background-color: #ffe0b2; /* Light orange row highlight on hover */
+}
+
+/* General button styles */
+button {
+    background-color: #ff7043; /* Soft orange button */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px auto;
+    display: block;
+}
+
+button:hover {
+    background-color: #d84315; /* Darker orange on hover */
+}
+

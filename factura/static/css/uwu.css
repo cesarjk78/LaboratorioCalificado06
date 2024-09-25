@@ -1,0 +1,49 @@
+/* Estilos internos para la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffbea; /* Fondo suave amarillo */
+    color: #333; /* Texto oscuro */
+    margin: 20px; /* Espacio alrededor del contenido */
+    text-align: center; /* Centrar el contenido */
+}
+
+h2 {
+    color: #ff9800; /* Color del título */
+}
+
+/* Contenedor para la lista */
+.container {
+    max-width: 400px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 10px; /* Espacio interno */
+}
+
+ul {
+    list-style-type: none; /* Eliminar los puntos de la lista */
+    padding: 0; /* Eliminar padding */
+}
+
+li {
+    background-color: #ffeb3b; /* Fondo amarillo brillante para los elementos de la lista */
+    margin: 10px 0; /* Espacio entre los elementos */
+    padding: 10px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición para el hover */
+    max-width: 300px; /* Ancho máximo de cada elemento de la lista */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+}
+
+li:hover {
+    background-color: #ffe57f; /* Color al pasar el ratón */
+}
+
+a {
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    color: #e65100; /* Color del enlace */
+    font-weight: bold; /* Negrita para los enlaces */
+}
+
+a:hover {
+    color: #bf360c; /* Color al pasar el ratón sobre el enlace */
+}

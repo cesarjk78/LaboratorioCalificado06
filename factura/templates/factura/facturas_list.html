@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Facturas</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/uwu.css' %}"> 
+</head>
+<body>
+    <h2>Lista de Facturas</h2>
+    <ul>
+        {% for factura in facturas %}
+            <li>
+                <a href="{% url 'factura-detail' factura.pk %}">Factura N° {{ factura.numero_factura }} - {{ factura.cliente.nombre_cliente }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
